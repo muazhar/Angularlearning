@@ -1,0 +1,8 @@
+<h1> My Produts</h1>
+<!-- Event Bingding-->
+<button (click)="productName = 'Tree'">Change Name</button>
+<button (click)="productName = 'Tree'" disabled>Change Name</button>
+<button (click)="productName = 'Tree'" [disabled]="isDisable">Change Name</button>
+<div>{{productName}}</div>
+
+<input type="text" [(ngModel)]="productName">
