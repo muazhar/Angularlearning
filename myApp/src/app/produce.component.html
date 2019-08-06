@@ -9,13 +9,13 @@
 
 
 <hr>
-
+ 
 <br>
 <br>
+<input *ngIf="!isDisable" type="text" [(ngModel)]="productName">
+<button *ngIf="!isDisable" (click)="onAddProduct()">Add Product</button>
 
-<button (click)="onAddProduct()">Add Product</button>
-<div *ngFor="let item of productList">
-    {{item}}
-</div>
+
+<app-products *ngFor="let item of productList" [pName]="item"></app-products>
 
 

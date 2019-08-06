@@ -9,7 +9,8 @@ import { ProduceComponent } from './produce.component';
 @NgModule({
   declarations: [
     AppComponent,
-  ProduceComponent
+  ProduceComponent,
+  ProductsComponent
   ],
   imports: [
     BrowserModule,
