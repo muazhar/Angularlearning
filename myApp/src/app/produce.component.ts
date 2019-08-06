@@ -19,4 +19,8 @@ export class ProduceComponent{
     onAddProduct(){
         this.productList.push(this.productName);
     }
+
+    onRemoveProduct(item :string){
+        this.productList =  this.productList.filter( p => p!= item);
+    }
 }

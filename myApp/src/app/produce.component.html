@@ -16,6 +16,6 @@
 <button *ngIf="!isDisable" (click)="onAddProduct()">Add Product</button>
 
 
-<app-products *ngFor="let item of productList" [pName]="item"></app-products>
+<app-products (productClicked)="onRemoveProduct(item)" *ngFor="let item of productList" [pName]="item"></app-products>
 
 
