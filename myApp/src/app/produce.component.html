@@ -6,3 +6,16 @@
 <div>{{productName}}</div>
 
 <input type="text" [(ngModel)]="productName">
+
+
+<hr>
+
+<br>
+<br>
+
+<button (click)="onAddProduct()">Add Product</button>
+<div *ngFor="let item of productList">
+    {{item}}
+</div>
+
+
