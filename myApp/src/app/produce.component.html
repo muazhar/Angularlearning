@@ -16,6 +16,17 @@
 <button *ngIf="!isDisable" (click)="onAddProduct()">Add Product</button>
 
 
-<app-products (productClicked)="onRemoveProduct(item)" *ngFor="let item of productList" [pName]="item"></app-products>
+ <!--<app-products (productClicked)="onRemoveProduct(item)" *ngFor="let item of productList" [pName]="item"></app-products>
+-->
 
+<br>
+<hr>
+<br>
+
+<h1>Forms</h1>
+<form (ngSubmit)="onAddProduct(f)" #f="ngForm">
+    <input type="text" ngModel name="prdName" required>
+    <button type="submit">Add Product</button>
+</form>
+<app-products (productClicked)="onRemoveProduct(item)" *ngFor="let item of productList" [pName]="item"></app-products>
 

@@ -16,8 +16,12 @@ export class ProduceComponent{
         },3000);
     }
     
-    onAddProduct(){
-        this.productList.push(this.productName);
+    onAddProduct(form){
+        //this.productList.push(this.productName);
+        //console.log(form);
+        if(form.valid){
+            this.productList.push(form.value.prdName);
+        }
     }
 
     onRemoveProduct(item :string){
